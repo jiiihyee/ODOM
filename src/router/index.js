@@ -1,17 +1,26 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Router from 'vue-router';
 
-Vue.use(VueRouter);
+Vue.use(Router);
 
-const router = new VueRouter({
-    routes:[
-        {   
-            //url 주소
-            path:'',
-            
-            //url 주소로 갔을 때 표시될 컴포넌트 
-            component:,
-        }, 
-        
-    ]
-})
+export default new Router({
+	mode: 'history',
+     routes: [
+    //로그인 시 대체
+    // { path: "/", redirect: "/login" },
+    {path: '/', redirect: '/home'},
+
+    {
+      path: '/home',
+      name: 'mainhome',
+      
+      component: () => import('@/view/MainHome.vue'),
+    },
+    {
+      path: '/information',
+      name: 'maininfo',
+      
+      component: () => import('@/view/MainInfo.vue'),
+    },
+]
+});
