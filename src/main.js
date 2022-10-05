@@ -5,10 +5,12 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import router from './router';
+import Default from '@/layouts/Default.vue';
 
 
 Vue.use(BootstrapVue)
 Vue.use(Vuex)
+Vue.component('default-layout', Default);
 
 Vue.config.productionTip = false
 

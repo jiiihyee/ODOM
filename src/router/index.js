@@ -13,13 +13,13 @@ export default new Router({
     {
       path: '/home',
       name: 'mainhome',
-      
+      meta: {layout: 'default'},
       component: () => import('@/view/MainHome.vue'),
     },
     {
       path: '/information',
       name: 'maininfo',
-      
+      meta: {layout: 'default'},
       component: () => import('@/view/MainInfo.vue'),
     },
 ]
