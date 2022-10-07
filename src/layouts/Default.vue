@@ -3,8 +3,8 @@
     <div class="container-fluid">
       <div class="title-header">
         <div class="main-title" @click="goHome()"> ODOM </div>
-        <Nav/>
-        <SNScompo/>
+        <Nav class="nav-bar"/>
+        <SNScompo class="sns"/>
     </div>
       <div class="container">
         <slot />
@@ -56,19 +56,22 @@ import Nav from '../components/layout/NavBar.vue'
     padding: 5px 20px;
   }
   .main-title{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     height: 100px;
     font-family: 'establishRetrosansOTF';
     font-weight: normal;
     font-style: normal;
-    padding: 3%;
+    margin-top: 2.3%;
   }
 @font-face {
     font-family: 'establishRetrosansOTF';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+.sns{
+  margin-right: 5%;
 }
 .main-title{
     cursor: pointer;

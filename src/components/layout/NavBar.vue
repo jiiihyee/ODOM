@@ -1,10 +1,9 @@
 <template>
   <div>
-    <b-nav>
-    <b-nav-item active>Active</b-nav-item>
-    <b-nav-item>Link</b-nav-item>
-    <b-nav-item>Another Link</b-nav-item>
-    <b-nav-item disabled>Disabled</b-nav-item>
+    <b-nav class="nav">
+    <b-nav-item class="odom" >About</b-nav-item>
+    <b-nav-item >ODOM-Log</b-nav-item>
+    <b-nav-item >Contact</b-nav-item>
   </b-nav>
 
   </div>
@@ -17,5 +16,9 @@ export default {
 </script>
 
 <style>
-
+.nav-link{
+  background-color: black;
+  color: white;
+  
+}
 </style>
