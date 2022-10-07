@@ -1,15 +1,17 @@
 <template>
-  <div id="app">
-    <div>hi</div>
-  </div>
+  <component :is="layout" id="common">
+    <router-view></router-view>
+  </component>
 </template>
 
 <script>
 export default {
   name: 'App',
-  components: {
-  
-  }
+  computed: {
+    layout() {
+      return `${this.$route.meta.layout || 'default'}-layout`
+    },
+  },
 }
 </script>
 
