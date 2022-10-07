@@ -8,7 +8,17 @@
 
 <script>
 export default {
-
+  methods:{
+    goInsta(){
+      window.open("https://www.instagram.com/1minute_art_history_aesthetics/", "_blank");    
+    },
+    goKakao(){
+      window.open("https://pf.kakao.com/_DxipPb", "_blank");    
+    },
+    goBlog(){
+      window.open("https://blog.naver.com/1minute_art_history", "_blank");    
+    }
+  }
 }
 </script>
 
