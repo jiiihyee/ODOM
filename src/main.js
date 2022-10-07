@@ -16,7 +16,8 @@ import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VWave from 'v-wave'
 
-
+import SequentialEntrance from 'vue-sequential-entrance'
+import 'vue-sequential-entrance/vue-sequential-entrance.css'
 
 /* add icons to the library */
 library.add(faUserSecret);
@@ -26,6 +27,7 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(VWave)
 Vue.use(BootstrapVue)
 Vue.use(Vuex)
+Vue.use(SequentialEntrance);
 Vue.component('default-layout', Default);
 
 Vue.config.productionTip = false
