@@ -10,7 +10,7 @@
 export default {
   methods:{
     goInsta(){
-      window.open("https://www.instagram.com/1minute_art_history_aesthetics/", "_blank");    
+      window.open("https://www.instagram.com/1minute_arte/", "_blank");    
     },
     goKakao(){
       window.open("https://pf.kakao.com/_DxipPb", "_blank");    

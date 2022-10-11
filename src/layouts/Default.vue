@@ -9,6 +9,12 @@
       <div class="container">
         <slot />
       </div>
+
+      <div class="footer title-header-2">
+        <div class="main-title-2" @click="goHome()"> ODOM </div>
+        
+      
+    </div>
      
     </div>
 </template>
@@ -42,15 +48,25 @@ import Nav from '../components/layout/NavBar.vue'
   <style scoped>
   .container,
   .container-fluid {
-    padding: 0px 0px;
+    padding: 0px 0px 0px 0px;
     position: relative;
     min-height: 100vh;
+    height: 100%;
   }
   .title-header{
     color: white;
     background-color: black;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+  }
+  .title-header-2{
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
@@ -75,6 +91,17 @@ import Nav from '../components/layout/NavBar.vue'
 }
 .main-title{
     cursor: pointer;
+}
+.main-title-2{
+  cursor: pointer;
+  font-size: 35px;
+    font-weight: 700;
+    height: 100px;
+    font-family: 'establishRetrosansOTF';
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 3%;
+   
 }
   </style>
   
