@@ -22,5 +22,11 @@ export default new Router({
       meta: {layout: 'default'},
       component: () => import('@/view/MainInfo.vue'),
     },
+    {
+      path: '/about-odom',
+      name: 'aboutodom',
+      meta: {layout: 'default'},
+      component: () => import('@/view/AboutOdom.vue'),
+    },
 ]
 });

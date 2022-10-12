@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-nav class="nav">
-    <b-nav-item class="odom" >About</b-nav-item>
+    <b-nav-item class="odom" @click="goAbout()" >About</b-nav-item>
     <b-nav-item >ODOM-Log</b-nav-item>
     <b-nav-item >Contact</b-nav-item>
   </b-nav>
@@ -11,7 +11,11 @@
 
 <script>
 export default {
-
+  methods:{
+    goAbout(){
+      this.$router.push({name: 'aboutodom'})
+    }
+  }
 }
 </script>
 
