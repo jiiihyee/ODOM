@@ -12,8 +12,13 @@
 
       <div class="footer title-header-2">
         <div class="main-title-2" @click="goHome()"> ODOM </div>
-        
-      
+        <div class="footer-info"> 
+          <span>대표 : 이 건</span>
+          <span class="kakao-chat" @click="kakaoChat()">카톡 상담 하기 &nbsp;<i class="fa-regular fa-comments"></i></span>
+          <span>이메일 문의 : 1minute.art.history@gmail.com</span>
+          <span>&nbsp;</span>
+          <span>Copyright © 2022.ODOM. ALL rights reserved.</span>
+        </div>
     </div>
      
     </div>
@@ -40,7 +45,12 @@ import Nav from '../components/layout/NavBar.vue'
         },
         goHome(){
             this.$router.push({ name: 'mainhome' });
-        }
+        },
+        kakaoChat(){ //채팅 상담하기 
+        window.Kakao.Channel.chat({
+            channelPublicId: '_DxipPb' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+            });
+    },
     }
   }
   </script>
@@ -102,6 +112,14 @@ import Nav from '../components/layout/NavBar.vue'
     font-style: normal;
     margin-top: 3%;
    
+}
+.kakao-chat{
+  cursor: pointer;
+}
+.footer-info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
 }
   </style>
   
