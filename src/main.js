@@ -19,6 +19,8 @@ import VWave from 'v-wave'
 import SequentialEntrance from 'vue-sequential-entrance'
 import 'vue-sequential-entrance/vue-sequential-entrance.css'
 
+import VueFab from 'vue-float-action-button'
+
 /* add icons to the library */
 library.add(faUserSecret);
 
@@ -28,6 +30,8 @@ Vue.use(VWave)
 Vue.use(BootstrapVue)
 Vue.use(Vuex)
 Vue.use(SequentialEntrance);
+
+Vue.use(VueFab)
 Vue.component('default-layout', Default);
 
 Vue.config.productionTip = false
