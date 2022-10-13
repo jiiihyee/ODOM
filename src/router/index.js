@@ -28,5 +28,17 @@ export default new Router({
       meta: {layout: 'default'},
       component: () => import('@/view/AboutOdom.vue'),
     },
+    {
+      path: '/odom-log',
+      name: 'odomlog',
+      meta: {layout: 'default'},
+      component: () => import('@/view/Log.vue'),
+    },
+    {
+      path: '/Contact-odom',
+      name: 'contactodom',
+      meta: {layout: 'default'},
+      component: () => import('@/view/Contact.vue'),
+    },
 ]
 });
