@@ -12,6 +12,7 @@ export default {
       return `${this.$route.meta.layout || 'default'}-layout`
     },
   },
+    
 }
 </script>
 
