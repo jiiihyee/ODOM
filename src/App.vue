@@ -3,12 +3,17 @@
   <transition name="fade">
     <router-view></router-view>
   </transition>
+  <div class="btn-space"><FloatBtn class="float-btn" /></div>
   </component>
 </template>
 
 <script>
+import FloatBtn from '@/components/FloatBtn.vue'
 export default {
   name: 'App',
+  components:{
+        FloatBtn
+    },
   computed: {
     layout() {
       return `${this.$route.meta.layout || 'default'}-layout`
@@ -35,5 +40,15 @@ export default {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.float-btn{
+    position: fixed;
+    margin-bottom: 0.3%;
+    margin-right:-10%;
+    z-index: 9999;
+    overflow: initial;
+    
+    /* padding-bottom: 10%; */
 }
 </style>

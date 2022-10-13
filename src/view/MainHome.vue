@@ -21,20 +21,11 @@
     </div>
 </div>
     </sequential-entrance>
-    <div class="btn-space"><FloatBtn class="float-btn" /></div>
  </div>
 </template>
 
 <script>
-import FloatBtn from '../components/FloatBtn.vue'
 export default {
-    components:{
-        FloatBtn
-    },
-    created(){
-      this.kakaoLink();
-    },
-
 }
 </script>
 
@@ -55,13 +46,5 @@ export default {
     align-items: center;
     height: 100vh;
 }
-.float-btn{
-    position: fixed;
-    margin-bottom: 0.3%;
-    margin-right:-10%;
-    z-index: 9999;
-    overflow: initial;
-    
-    /* padding-bottom: 10%; */
-}
+
 </style>
