@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import router from './router';
 import Default from '@/layouts/Default.vue';
+import store from './store'
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 
@@ -40,6 +41,7 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
 
