@@ -31,7 +31,6 @@ const store = new Vuex.Store({
             media_set.link = data.data[i].permalink
             media.push({...media_set})
             } 
-            console.log(media) 
             commit('set_data', media)     
             resolve(true)
         }    

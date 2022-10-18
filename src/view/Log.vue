@@ -1,41 +1,35 @@
 
 <template>
     <div class="container">
-            <li v-for="item in media" :key="item.caption">{{item.caption}}</li>
+        <div>
+           <Card v-for="item in datas" :item="item" :key="item.id" class="lists" id="camList"/>
         </div>
+    </div>
    </template>
 
 <script>
+import Card from '@/components/Card.vue'
+import { mapGetters } from 'vuex'
+
 export default {
+    computed:{
+        ...mapGetters({
+            datas: 'fetchdata'
+        })
+    },
+    components:{
+        Card
+    },
     data(){
         return{
-            url:"https://graph.instagram.com/17841450481745795/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption&access_token=IGQVJYZA1VoR2RvcTBXaFhyenByV195TzQ2aXJzZAkdhZAzYwc09sazlLWDJSUFJSWUhNWXFKamVsMkdDNjZAPNkN0V2lFRk51MlNuZAFN5OWl3MDVLTUdYamhsWW1JczZADRGZAzcVRfUmNB",
-        media:[],
-        
+            url:"https://graph.instagram.com/17841450481745795/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption&access_token=IGQVJYZA1VoR2RvcTBXaFhyenByV195TzQ2aXJzZAkdhZAzYwc09sazlLWDJSUFJSWUhNWXFKamVsMkdDNjZAPNkN0V2lFRk51MlNuZAFN5OWl3MDVLTUdYamhsWW1JczZADRGZAzcVRfUmNB"        
         }
     } ,
     created(){
-        this.loadData();
+        this.$store.dispatch('fetch_Data', this.url)
+        console.log('dd', this.datas)
     }, 
-    methods:{
-        async loadData(){
-            await fetch(this.url)
-            .then((response) => response.json())
-            .then((data) =>
-                
-              {  for( let i =0 ; i<data.data.length; i ++){
-                const media_set = {}
-                media_set.img = data.data[i].media_url
-                media_set.caption = data.data[i].caption
-                media_set.link = data.data[i].permalink
-                
-                this.media.push({...media_set})
-                }            
-            }    
-            )
-            .catch((error)=> console.log(error))
-        }
-        
+    methods:{  
 
     }
 }
