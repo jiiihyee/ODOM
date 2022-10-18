@@ -2,11 +2,11 @@
 //액세스 토큰 발급
 $url = "https://api.instagram.com/oauth/access_token";
 $post_array = array(
-    'client_id'=>'522600873208568',
-    'client_secret'=>'161a8c07c5347677cfe5afb1c7a8359b',
+    'client_id'=>'1179998542867267',
+    'client_secret'=>'c808c1a7d622e6ae7c6b9f3fd1c580a9',
     'grant_type'=>'authorization_code',
     'redirect_uri'=>'https://ymillonga.xyz/user/facebook/callback',
-    'code'=>'AQC_dvSU_bUYQHTy8KJ-vXGDS4Rvm40dMDDiW87BHOnoH0sQmoF6pY2suPbFYOayhE0YhrvrYckZ9uR0jY6o4DoZYlq8fggc6s8Pr7xMLBaM2j61BGJMZYqOfvR4f8snGxxQvP6i3R2ENRFgIvJFo44CP7wMxpe_FdM9RvD-0luykHXavrctfyPm2fE7we636EWt3WKQmyZbaXCDT_j5Co9PSWh_OyWnaM2dMmnsTeOIag'
+    'code'=>'AQCMBiFSqe_wQb3AC_xySrkKWg588cmxgxWLf1fOuqL5kbP9uiVrnUWqOTzIsEKg24Xa3LGnWNfmFQp8jOuWNjKmZQlUouZ1bsrjIaXido2mCNgkJrhSdnsDmgjrLMWeoH6StzzFZDrxq-kQUJQCFnZ7EToT53RUDzwe9Tby-DUbiVHMOESCV9IoZscEoG9rwegQ5qWGKGsjePZFt8gfMEwXrsRBVyKuuGgSQdP9CiwipA'
 );
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_POST,true);
