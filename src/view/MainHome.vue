@@ -30,7 +30,10 @@ export default {
 
 <style>
 .container {
-    
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
     margin: 0% 0% 0% 0%;
 }
 .box{
@@ -39,13 +42,16 @@ export default {
     
 }
 .main-img{
-    padding: 5%;
-    width: 500px;
+    padding: 5% 3% 0 0;
+    margin-left: 20%;
+    width: 400px;
 }
 .wave-box{
     display: flex;
     align-items: center;
     height: 100vh;
+    width: 100vw;
+    left: 0;
 }
 
 </style>

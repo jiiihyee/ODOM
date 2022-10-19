@@ -5,7 +5,7 @@
         <div class="title-box">
         <img class="logo" src="../assets/logo_black.png"/>
         <div class="main-title" @click="goHome()"> 
-          하루일분 미학사 </div>
+          하루일분 예술 </div>
       </div>
         <div class="title-side-box">  
         <Nav class="nav-bar"/>
@@ -19,13 +19,13 @@
 
 
       <div class="footer title-header-2">
-        <div class="main-title-2" @click="goHome()"> 하루일분 미학사</div>
+        <div class="main-title-2" @click="goHome()"> 하루일분 예술</div>
         <div class="footer-info"> 
           <span>대표 : 이 건</span>
           <span class="kakao-chat" @click="kakaoChat()">카톡 상담 하기 &nbsp;<i class="fa-regular fa-comments"></i></span>
           <span>이메일 문의 : 1minute.art.history@gmail.com</span>
           <span>&nbsp;</span>
-          <span>Copyright © 2022.하루일분미학사. ALL rights reserved.</span>
+          <span>Copyright © 2022.하루일분예술. ALL rights reserved.</span>
         </div>
     </div>
      
@@ -70,7 +70,7 @@ import Nav from '../components/layout/NavBar.vue'
     position: relative;
     min-height: 100vh;
     height: 100%;
-    margin : auto    
+
   }
 
 

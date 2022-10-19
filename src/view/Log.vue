@@ -1,6 +1,6 @@
 
 <template>
-    <div>
+    <div class="container">
         <div class="card-box">
            <Card v-for="item in datas" :item="item" :key="item.id" class="cards" id="cards-list"
            />
@@ -40,14 +40,17 @@ export default {
 
 <style scoped>
 .container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0 0 0 35%;
 }
 .card-box{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10%;
+    
 }
 </style>
