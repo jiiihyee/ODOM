@@ -2,10 +2,17 @@
 <template>
     <div class="container-fluid">
       <div class="title-header">
-        <div class="main-title" @click="goHome()"> 하루일분 미학사 </div>
+        <div class="title-box">
+        <img class="logo" src="../assets/logo_black.png"/>
+        <div class="main-title" @click="goHome()"> 
+          하루일분 미학사 </div>
+      </div>
+        <div class="title-side-box">  
         <Nav class="nav-bar"/>
         <SNScompo class="sns"/>
-    </div>
+      </div>
+      </div>
+     
       <div class="container">
         <slot />
       </div>
@@ -62,6 +69,23 @@ import Nav from '../components/layout/NavBar.vue'
     position: relative;
     min-height: 100vh;
     height: 100%;
+  }
+  .title-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .title-side-box{
+    display: flex;
+    width:600px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+  .logo{
+    width: 150px;
+    height: 150px;
   }
   .title-header{
     color: white;

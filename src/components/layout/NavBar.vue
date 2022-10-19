@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="nav-box">
     <b-nav class="nav">
     <b-nav-item class="odom" @click="goAbout()" >About</b-nav-item>
     <b-nav-item @click="goLog()">ODOM-Log</b-nav-item>
@@ -29,6 +29,9 @@ export default {
 .nav-link{
   background-color: black;
   color: white;
-  
+}
+.nav-box{
+  display: flex;
+  width: fit-content
 }
 </style>

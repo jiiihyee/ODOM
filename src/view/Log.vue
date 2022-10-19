@@ -2,7 +2,7 @@
 <template>
     <div>
         <div class="card-box">
-           <Card v-for="item in this.pushData" :item="item" :key="item.id" class="cards" id="cards-list"/>
+           <Card v-for="item in datas" :item="item" :key="item.id" class="cards" id="cards-list"/>
         </div>
     </div>
    </template>
