@@ -40,7 +40,7 @@ export default {
 }
 .main-img{
     padding: 5%;
-    width: 600px;
+    width: 500px;
 }
 .wave-box{
     display: flex;

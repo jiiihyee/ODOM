@@ -70,6 +70,7 @@ import Nav from '../components/layout/NavBar.vue'
     position: relative;
     min-height: 100vh;
     height: 100%;
+    margin : auto    
   }
 
 
