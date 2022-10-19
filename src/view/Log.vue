@@ -24,7 +24,7 @@ export default {
     },
     data(){
         return{
-            url:"https://graph.instagram.com/17841450481745795/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption&access_token=IGQVJYZA1VoR2RvcTBXaFhyenByV195TzQ2aXJzZAkdhZAzYwc09sazlLWDJSUFJSWUhNWXFKamVsMkdDNjZAPNkN0V2lFRk51MlNuZAFN5OWl3MDVLTUdYamhsWW1JczZADRGZAzcVRfUmNB",
+            url:"https://graph.instagram.com/17841450481745795/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption&access_token=IGQVJYM0phSWZAkZADhZAX1hWQXloVlJUWWs3X0h1Ym5LbkpSRm53U1ptaDg1dndMTFNlU0ZABTUJnWWVSUEZA2VF85TjBwRmRWdGk5d0RFYTJVTDhRcWI5b1dzUHZATR1A5SXgzeDhUaWNB",
             pushData:[]        
         }
     } ,
