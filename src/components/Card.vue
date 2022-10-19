@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <b-card :img-src=this.item.img img-alt="Card image" img-left class="mb-3">
+  <div class="main" @click="goDetail()">
+    <b-card :img-src=this.item.img img-alt="Card image" img-left class="card mb-3">
       <b-card-text>
         <div class="caption">{{this.caption}}</div>
         <textarea disabled v-model="content" class="content"/>
@@ -16,10 +16,16 @@ export default {
             type:Object
         }
     },
+    methods:{
+        goDetail(){
+            window.open(this.link);  
+        }
+    },
     data(){
         return{
             caption: this.item.caption.split('\n')[0], //제목
             content:'',
+            link : this.item.link
         }
     },
     created(){
@@ -32,9 +38,12 @@ export default {
 
 <style scoped>
 img{
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   
+}
+.main{
+    cursor: pointer;
 }
 .caption{
     font-weight: bold;
@@ -42,20 +51,21 @@ img{
     margin-bottom: 5%;
 }
 .content{
-  width: 400px;
+  width: 490px;
   height: 200px;
   margin: 0 0 0 0;
 }
 .content:disabled{
+    cursor: pointer;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: 10;
   resize: none;
   border: none;
   background: transparent;
   text-overflow: ellipsis;
   overflow: hidden;
-  height: 200px;
+  height: 250px;
   padding: 3%;
 }
 b-card-body{

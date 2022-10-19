@@ -2,7 +2,8 @@
 <template>
     <div>
         <div class="card-box">
-           <Card v-for="item in datas" :item="item" :key="item.id" class="cards" id="cards-list"/>
+           <Card v-for="item in datas" :item="item" :key="item.id" class="cards" id="cards-list"
+           />
         </div>
     </div>
    </template>
@@ -10,6 +11,7 @@
 <script>
 import Card from '@/components/Card.vue'
 import { mapGetters } from 'vuex'
+
 
 export default {
     computed:{
@@ -29,10 +31,9 @@ export default {
     created(){
         this.$store.dispatch('fetch_Data', this.url)
         .then( this.pushData = this.datas)
-        console.log('pushData', this.pushData)
     }, 
     methods:{  
-
+       
     }
 }
 </script>
@@ -48,6 +49,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2%;
+    padding: 10%;
 }
 </style>
