@@ -12,10 +12,11 @@
         <SNScompo class="sns"/>
       </div>
       </div>
-     
+   
       <div class="container">
         <slot />
       </div>
+
 
       <div class="footer title-header-2">
         <div class="main-title-2" @click="goHome()"> 하루일분 미학사</div>
@@ -70,6 +71,8 @@ import Nav from '../components/layout/NavBar.vue'
     min-height: 100vh;
     height: 100%;
   }
+
+
   .title-box{
     display: flex;
     flex-direction: row;

@@ -10,8 +10,7 @@
                 easing: 'ease-in',
         }" >
      
-     <b-img src="https://images-cdn.bridgemanimages.com/api/1.0/image/600wm.ATU.9096430.7055475/343730.jpg" fluid   alt="Responsive image" class="main-img" > 
-     </b-img>
+     <img src="../assets/loco_white.png" fluid   alt="Responsive image" class="main-img" /> 
     <span class="main-content">
         <div>𝑨𝒓𝒕 𝒊𝒔 𝒂 𝒍𝒊𝒏𝒆 𝒂𝒓𝒐𝒖𝒏𝒅 𝒚𝒐𝒖𝒓 𝒕𝒉𝒐𝒖𝒈𝒉𝒕𝒔.</div>
         <div> &nbsp;</div>
@@ -31,6 +30,7 @@ export default {
 
 <style>
 .container {
+    
     margin: 0% 0% 0% 0%;
 }
 .box{
@@ -40,6 +40,7 @@ export default {
 }
 .main-img{
     padding: 5%;
+    width: 600px;
 }
 .wave-box{
     display: flex;

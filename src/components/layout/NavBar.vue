@@ -2,7 +2,7 @@
   <div class="nav-box">
     <b-nav class="nav">
     <b-nav-item class="odom" @click="goAbout()" >About</b-nav-item>
-    <b-nav-item @click="goLog()">ODOM-Log</b-nav-item>
+    <b-nav-item @click="goLog()">1minute_gram</b-nav-item>
     <b-nav-item @click="goContact()">Contact</b-nav-item>
   </b-nav>
 
@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .nav-link{
   background-color: black;
   color: white;

@@ -1,4 +1,5 @@
 <template>
+    <sequential-entrance delay="1500" class="body">
   <div class="main" @click="goDetail()">
     <b-card :img-src=this.item.img img-alt="Card image" img-left class="card mb-3">
       <b-card-text>
@@ -7,6 +8,7 @@
       </b-card-text>
     </b-card>
 </div>
+</sequential-entrance>
 </template>
 
 <script>
@@ -42,9 +44,14 @@ img{
   height: 350px;
   
 }
+.card:hover{
+    cursor: pointer;
+    background-color: rgb(224, 224, 224);
+}
 .main{
     cursor: pointer;
 }
+
 .caption{
     font-weight: bold;
     font-size: large;
