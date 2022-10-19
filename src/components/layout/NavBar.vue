@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="nav-box">
     <b-nav class="nav">
-    <b-nav-item class="odom" >About</b-nav-item>
-    <b-nav-item >ODOM-Log</b-nav-item>
-    <b-nav-item >Contact</b-nav-item>
+    <b-nav-item class="odom" @click="goAbout()" >About</b-nav-item>
+    <b-nav-item @click="goLog()">1minute_gram</b-nav-item>
+    <b-nav-item @click="goContact()">Contact</b-nav-item>
   </b-nav>
 
   </div>
@@ -11,14 +11,27 @@
 
 <script>
 export default {
-
+  methods:{
+    goAbout(){
+      this.$router.push({name: 'aboutodom'}).catch(()=>{});
+    },
+    goLog(){
+      this.$router.push({name: 'odomlog'}).catch(()=>{});
+    },
+    goContact(){
+      this.$router.push({name: 'contactodom'}).catch(()=>{});
+    }
+  }
 }
 </script>
 
-<style>
+<style scoped>
 .nav-link{
   background-color: black;
   color: white;
-  
+}
+.nav-box{
+  display: flex;
+  width: fit-content
 }
 </style>

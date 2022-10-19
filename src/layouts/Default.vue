@@ -2,18 +2,31 @@
 <template>
     <div class="container-fluid">
       <div class="title-header">
-        <div class="main-title" @click="goHome()"> ODOM </div>
+        <div class="title-box">
+        <img class="logo" src="../assets/logo_black.png"/>
+        <div class="main-title" @click="goHome()"> 
+          하루일분 미학사 </div>
+      </div>
+        <div class="title-side-box">  
         <Nav class="nav-bar"/>
         <SNScompo class="sns"/>
-    </div>
+      </div>
+      </div>
+   
       <div class="container">
         <slot />
       </div>
 
+
       <div class="footer title-header-2">
-        <div class="main-title-2" @click="goHome()"> ODOM </div>
-        
-      
+        <div class="main-title-2" @click="goHome()"> 하루일분 미학사</div>
+        <div class="footer-info"> 
+          <span>대표 : 이 건</span>
+          <span class="kakao-chat" @click="kakaoChat()">카톡 상담 하기 &nbsp;<i class="fa-regular fa-comments"></i></span>
+          <span>이메일 문의 : 1minute.art.history@gmail.com</span>
+          <span>&nbsp;</span>
+          <span>Copyright © 2022.하루일분미학사. ALL rights reserved.</span>
+        </div>
     </div>
      
     </div>
@@ -39,8 +52,13 @@ import Nav from '../components/layout/NavBar.vue'
             window.open("https://blog.naver.com/1minute_art_history", "_blank");  
         },
         goHome(){
-            this.$router.push({ name: 'mainhome' });
-        }
+            this.$router.push({ name: 'mainhome' }).catch(()=>{});
+        },
+        kakaoChat(){ //채팅 상담하기 
+        window.Kakao.Channel.chat({
+            channelPublicId: '_DxipPb' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+            });
+    },
     }
   }
   </script>
@@ -52,6 +70,26 @@ import Nav from '../components/layout/NavBar.vue'
     position: relative;
     min-height: 100vh;
     height: 100%;
+    margin : auto    
+  }
+
+
+  .title-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .title-side-box{
+    display: flex;
+    width:600px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+  .logo{
+    width: 150px;
+    height: 150px;
   }
   .title-header{
     color: white;
@@ -102,6 +140,14 @@ import Nav from '../components/layout/NavBar.vue'
     font-style: normal;
     margin-top: 3%;
    
+}
+.kakao-chat{
+  cursor: pointer;
+}
+.footer-info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
 }
   </style>
   
