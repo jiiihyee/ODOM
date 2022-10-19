@@ -1,6 +1,6 @@
 
 <template>
-    <div class="container">
+    <div>
         <div class="card-box">
            <Card v-for="item in this.pushData" :item="item" :key="item.id" class="cards" id="cards-list"/>
         </div>
@@ -41,6 +41,8 @@ export default {
 .container{
     display: flex;
     flex-direction: column;
+    align-items: flex-end
+    
 }
 .card-box{
     display: flex;
