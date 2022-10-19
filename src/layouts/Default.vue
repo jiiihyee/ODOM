@@ -44,7 +44,7 @@ import Nav from '../components/layout/NavBar.vue'
             window.open("https://blog.naver.com/1minute_art_history", "_blank");  
         },
         goHome(){
-            this.$router.push({ name: 'mainhome' });
+            this.$router.push({ name: 'mainhome' }).catch(()=>{});
         },
         kakaoChat(){ //채팅 상담하기 
         window.Kakao.Channel.chat({

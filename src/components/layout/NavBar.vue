@@ -13,13 +13,13 @@
 export default {
   methods:{
     goAbout(){
-      this.$router.push({name: 'aboutodom'})
+      this.$router.push({name: 'aboutodom'}).catch(()=>{});
     },
     goLog(){
-      this.$router.push({name: 'odomlog'})
+      this.$router.push({name: 'odomlog'}).catch(()=>{});
     },
     goContact(){
-      this.$router.push({name: 'contactodom'})
+      this.$router.push({name: 'contactodom'}).catch(()=>{});
     }
   }
 }
