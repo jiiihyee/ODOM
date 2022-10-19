@@ -2,7 +2,7 @@
 <template>
     <div class="container-fluid">
       <div class="title-header">
-        <div class="main-title" @click="goHome()"> ODOM </div>
+        <div class="main-title" @click="goHome()"> 하루일분 미학사 </div>
         <Nav class="nav-bar"/>
         <SNScompo class="sns"/>
     </div>
@@ -11,13 +11,13 @@
       </div>
 
       <div class="footer title-header-2">
-        <div class="main-title-2" @click="goHome()"> ODOM </div>
+        <div class="main-title-2" @click="goHome()"> 하루일분 미학사</div>
         <div class="footer-info"> 
           <span>대표 : 이 건</span>
           <span class="kakao-chat" @click="kakaoChat()">카톡 상담 하기 &nbsp;<i class="fa-regular fa-comments"></i></span>
           <span>이메일 문의 : 1minute.art.history@gmail.com</span>
           <span>&nbsp;</span>
-          <span>Copyright © 2022.ODOM. ALL rights reserved.</span>
+          <span>Copyright © 2022.하루일분미학사. ALL rights reserved.</span>
         </div>
     </div>
      
